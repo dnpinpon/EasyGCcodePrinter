@@ -1,0 +1,8 @@
+C:\Users\Alejandro\Documents\Visual Studio 2012\Projects\EasyGCodePrinter\EasyGCodePrinter\bin\Debug\EasyGCodePrinter.exe
+C:\Users\Alejandro\Documents\Visual Studio 2012\Projects\EasyGCodePrinter\EasyGCodePrinter\bin\Debug\EasyGCodePrinter.pdb
+C:\Users\Alejandro\Documents\Visual Studio 2012\Projects\EasyGCodePrinter\EasyGCodePrinter\obj\Debug\EasyGCodePrinter.csprojResolveAssemblyReference.cache
+C:\Users\Alejandro\Documents\Visual Studio 2012\Projects\EasyGCodePrinter\EasyGCodePrinter\obj\Debug\EasyGCodePrinter.Main.resources
+C:\Users\Alejandro\Documents\Visual Studio 2012\Projects\EasyGCodePrinter\EasyGCodePrinter\obj\Debug\EasyGCodePrinter.Properties.Resources.resources
+C:\Users\Alejandro\Documents\Visual Studio 2012\Projects\EasyGCodePrinter\EasyGCodePrinter\obj\Debug\EasyGCodePrinter.csproj.GenerateResource.Cache
+C:\Users\Alejandro\Documents\Visual Studio 2012\Projects\EasyGCodePrinter\EasyGCodePrinter\obj\Debug\EasyGCodePrinter.exe
+C:\Users\Alejandro\Documents\Visual Studio 2012\Projects\EasyGCodePrinter\EasyGCodePrinter\obj\Debug\EasyGCodePrinter.pdb

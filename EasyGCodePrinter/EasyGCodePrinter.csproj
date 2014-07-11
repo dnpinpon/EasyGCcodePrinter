@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GCodeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCodeEditor.Designer.cs">
+      <DependentUpon>GCodeEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -51,6 +57,66 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ui\actions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui\actions.Designer.cs">
+      <DependentUpon>actions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui\burn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui\burn.Designer.cs">
+      <DependentUpon>burn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui\language.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui\language.Designer.cs">
+      <DependentUpon>language.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui\machine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui\machine.Designer.cs">
+      <DependentUpon>machine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui\options.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui\options.Designer.cs">
+      <DependentUpon>options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui\pen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui\pen.Designer.cs">
+      <DependentUpon>pen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui\profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui\profile.Designer.cs">
+      <DependentUpon>profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui\summary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui\summary.Designer.cs">
+      <DependentUpon>summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui\workArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui\workArea.Designer.cs">
+      <DependentUpon>workArea.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GCodeEditor.resx">
+      <DependentUpon>GCodeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -60,6 +126,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Ui\actions.resx">
+      <DependentUpon>actions.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -71,7 +140,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Helper\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
