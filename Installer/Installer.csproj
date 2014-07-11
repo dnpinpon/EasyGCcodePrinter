@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44ABAFE2-8F11-4A39-88B2-A477C24C317F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Installer</RootNamespace>
+    <AssemblyName>Installer</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Installer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Installer.Designer.cs">
+      <DependentUpon>Installer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\gs9.14\lib\Fontmap.URW-136.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fontmap.URW-136.TT</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Installer.resx">
+      <DependentUpon>Installer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Tools\gs9.14\bin\gsdll32.lib" />
+    <None Include="Tools\gs9.14\doc\AUTHORS" />
+    <None Include="Tools\gs9.14\doc\COPYING" />
+    <None Include="Tools\gs9.14\doc\gs-vms.hlp" />
+    <None Include="Tools\gs9.14\doc\GS9_Color_Management.pdf" />
+    <None Include="Tools\gs9.14\doc\GS9_Color_Management.tex" />
+    <None Include="Tools\gs9.14\doc\gsdoc.el" />
+    <None Include="Tools\gs9.14\examples\alphabet.ps" />
+    <None Include="Tools\gs9.14\examples\annots.pdf" />
+    <None Include="Tools\gs9.14\examples\chess.ps" />
+    <None Include="Tools\gs9.14\examples\cjk\all_ac1.ps" />
+    <None Include="Tools\gs9.14\examples\cjk\all_ag1.ps" />
+    <None Include="Tools\gs9.14\examples\cjk\all_aj1.ps" />
+    <None Include="Tools\gs9.14\examples\cjk\all_aj2.ps" />
+    <None Include="Tools\gs9.14\examples\cjk\all_ak1.ps" />
+    <None Include="Tools\gs9.14\examples\cjk\article9.ps" />
+    <None Include="Tools\gs9.14\examples\cjk\gscjk_ac.ps" />
+    <None Include="Tools\gs9.14\examples\cjk\gscjk_ag.ps" />
+    <None Include="Tools\gs9.14\examples\cjk\gscjk_aj.ps" />
+    <None Include="Tools\gs9.14\examples\cjk\gscjk_ak.ps" />
+    <None Include="Tools\gs9.14\examples\cjk\iso2022.ps" />
+    <None Include="Tools\gs9.14\examples\cjk\iso2022v.ps" />
+    <None Include="Tools\gs9.14\examples\colorcir.ps" />
+    <None Include="Tools\gs9.14\examples\doretree.ps" />
+    <None Include="Tools\gs9.14\examples\escher.ps" />
+    <None Include="Tools\gs9.14\examples\golfer.eps" />
+    <None Include="Tools\gs9.14\examples\grayalph.ps" />
+    <None Include="Tools\gs9.14\examples\ridt91.eps" />
+    <None Include="Tools\gs9.14\examples\snowflak.ps" />
+    <None Include="Tools\gs9.14\examples\text_graphic_image.pdf" />
+    <None Include="Tools\gs9.14\examples\text_graph_image_cmyk_rgb.pdf" />
+    <None Include="Tools\gs9.14\examples\tiger.eps" />
+    <None Include="Tools\gs9.14\examples\transparency_example.ps" />
+    <None Include="Tools\gs9.14\examples\vasarely.ps" />
+    <None Include="Tools\gs9.14\examples\waterfal.ps" />
+    <None Include="Tools\gs9.14\lib\acctest.ps" />
+    <None Include="Tools\gs9.14\lib\addxchar.ps" />
+    <None Include="Tools\gs9.14\lib\afmdiff.awk" />
+    <None Include="Tools\gs9.14\lib\align.ps" />
+    <None Include="Tools\gs9.14\lib\bj8.rpd" />
+    <None Include="Tools\gs9.14\lib\bj8gc12f.upp" />
+    <None Include="Tools\gs9.14\lib\bj8hg12f.upp" />
+    <None Include="Tools\gs9.14\lib\bj8oh06n.upp" />
+    <None Include="Tools\gs9.14\lib\bj8pa06n.upp" />
+    <None Include="Tools\gs9.14\lib\bj8pp12f.upp" />
+    <None Include="Tools\gs9.14\lib\bj8ts06n.upp" />
+    <None Include="Tools\gs9.14\lib\bjc610a0.upp" />
+    <None Include="Tools\gs9.14\lib\bjc610a1.upp" />
+    <None Include="Tools\gs9.14\lib\bjc610a2.upp" />
+    <None Include="Tools\gs9.14\lib\bjc610a3.upp" />
+    <None Include="Tools\gs9.14\lib\bjc610a4.upp" />
+    <None Include="Tools\gs9.14\lib\bjc610a5.upp" />
+    <None Include="Tools\gs9.14\lib\bjc610a6.upp" />
+    <None Include="Tools\gs9.14\lib\bjc610a7.upp" />
+    <None Include="Tools\gs9.14\lib\bjc610a8.upp" />
+    <None Include="Tools\gs9.14\lib\bjc610b1.upp" />
+    <None Include="Tools\gs9.14\lib\bjc610b2.upp" />
+    <None Include="Tools\gs9.14\lib\bjc610b3.upp" />
+    <None Include="Tools\gs9.14\lib\bjc610b4.upp" />
+    <None Include="Tools\gs9.14\lib\bjc610b6.upp" />
+    <None Include="Tools\gs9.14\lib\bjc610b7.upp" />
+    <None Include="Tools\gs9.14\lib\bjc610b8.upp" />
+    <None Include="Tools\gs9.14\lib\caption.ps" />
+    <None Include="Tools\gs9.14\lib\cat.ps" />
+    <None Include="Tools\gs9.14\lib\cbjc600.ppd" />
+    <None Include="Tools\gs9.14\lib\cbjc800.ppd" />
+    <None Include="Tools\gs9.14\lib\cdj550.upp" />
+    <None Include="Tools\gs9.14\lib\cdj690.upp" />
+    <None Include="Tools\gs9.14\lib\cdj690ec.upp" />
+    <None Include="Tools\gs9.14\lib\cid2code.ps" />
+    <None Include="Tools\gs9.14\lib\cidfmap" />
+    <None Include="Tools\gs9.14\lib\decrypt.ps" />
+    <None Include="Tools\gs9.14\lib\dnj750c.upp" />
+    <None Include="Tools\gs9.14\lib\dnj750m.upp" />
+    <None Include="Tools\gs9.14\lib\docie.ps" />
+    <None Include="Tools\gs9.14\lib\dvipdf" />
+    <None Include="Tools\gs9.14\lib\EndOfTask.ps" />
+    <None Include="Tools\gs9.14\lib\eps2eps" />
+    <None Include="Tools\gs9.14\lib\eps2eps.bat" />
+    <None Include="Tools\gs9.14\lib\eps2eps.cmd" />
+    <None Include="Tools\gs9.14\lib\FAPIconfig-FCO" />
+    <None Include="Tools\gs9.14\lib\FCOfontmap-PCLPS3" />
+    <None Include="Tools\gs9.14\lib\FCOfontmap-PS3" />
+    <None Include="Tools\gs9.14\lib\font2c" />
+    <None Include="Tools\gs9.14\lib\font2c.bat" />
+    <None Include="Tools\gs9.14\lib\font2c.cmd" />
+    <None Include="Tools\gs9.14\lib\font2c.ps" />
+    <None Include="Tools\gs9.14\lib\font2pcl.ps" />
+    <None Include="Tools\gs9.14\lib\Fontmap.ATB" />
+    <None Include="Tools\gs9.14\lib\Fontmap.ATM" />
+    <None Include="Tools\gs9.14\lib\Fontmap.OS2" />
+    <None Include="Tools\gs9.14\lib\Fontmap.OSF" />
+    <None Include="Tools\gs9.14\lib\Fontmap.SGI" />
+    <None Include="Tools\gs9.14\lib\Fontmap.Ult" />
+    <None Include="Tools\gs9.14\lib\Fontmap.URW-136.T1" />
+    <None Include="Tools\gs9.14\lib\Fontmap.URW-136.TT">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Fontmap.URW-136.cs</LastGenOutput>
+    </None>
+    <None Include="Tools\gs9.14\lib\Fontmap.VMS" />
+    <None Include="Tools\gs9.14\lib\ghostpdf.ppd" />
+    <None Include="Tools\gs9.14\lib\gsbj" />
+    <None Include="Tools\gs9.14\lib\gsbj.bat" />
+    <None Include="Tools\gs9.14\lib\gsdj" />
+    <None Include="Tools\gs9.14\lib\gsdj.bat" />
+    <None Include="Tools\gs9.14\lib\gsdj500" />
+    <None Include="Tools\gs9.14\lib\gsdj500.bat" />
+    <None Include="Tools\gs9.14\lib\gslj" />
+    <None Include="Tools\gs9.14\lib\gslj.bat" />
+    <None Include="Tools\gs9.14\lib\gslp" />
+    <None Include="Tools\gs9.14\lib\gslp.bat" />
+    <None Include="Tools\gs9.14\lib\gslp.ps" />
+    <None Include="Tools\gs9.14\lib\gsnd" />
+    <None Include="Tools\gs9.14\lib\gsnd.bat" />
+    <None Include="Tools\gs9.14\lib\gsndt.bat" />
+    <None Include="Tools\gs9.14\lib\gsnup.ps" />
+    <None Include="Tools\gs9.14\lib\gssetgs.bat" />
+    <None Include="Tools\gs9.14\lib\gssetgs32.bat" />
+    <None Include="Tools\gs9.14\lib\gssetgs64.bat" />
+    <None Include="Tools\gs9.14\lib\gst.bat" />
+    <None Include="Tools\gs9.14\lib\gstt.bat" />
+    <None Include="Tools\gs9.14\lib\gs_ce_e.ps" />
+    <None Include="Tools\gs9.14\lib\gs_cmdl.ps" />
+    <None Include="Tools\gs9.14\lib\gs_il2_e.ps" />
+    <None Include="Tools\gs9.14\lib\gs_kanji.ps" />
+    <None Include="Tools\gs9.14\lib\gs_ksb_e.ps" />
+    <None Include="Tools\gs9.14\lib\gs_l.xbm" />
+    <None Include="Tools\gs9.14\lib\gs_l.xpm" />
+    <None Include="Tools\gs9.14\lib\gs_lgo_e.ps" />
+    <None Include="Tools\gs9.14\lib\gs_lgx_e.ps" />
+    <None Include="Tools\gs9.14\lib\gs_l_m.xbm" />
+    <None Include="Tools\gs9.14\lib\gs_m.xbm" />
+    <None Include="Tools\gs9.14\lib\gs_m.xpm" />
+    <None Include="Tools\gs9.14\lib\gs_m_m.xbm" />
+    <None Include="Tools\gs9.14\lib\gs_pfile.ps" />
+    <None Include="Tools\gs9.14\lib\gs_rdlin.ps" />
+    <None Include="Tools\gs9.14\lib\gs_s.xbm" />
+    <None Include="Tools\gs9.14\lib\gs_s.xpm" />
+    <None Include="Tools\gs9.14\lib\gs_s_m.xbm" />
+    <None Include="Tools\gs9.14\lib\gs_t.xbm" />
+    <None Include="Tools\gs9.14\lib\gs_t.xpm" />
+    <None Include="Tools\gs9.14\lib\gs_t_m.xbm" />
+    <None Include="Tools\gs9.14\lib\gs_wl1_e.ps" />
+    <None Include="Tools\gs9.14\lib\gs_wl2_e.ps" />
+    <None Include="Tools\gs9.14\lib\gs_wl5_e.ps" />
+    <None Include="Tools\gs9.14\lib\ht_ccsto.ps" />
+    <None Include="Tools\gs9.14\lib\image-qa.ps" />
+    <None Include="Tools\gs9.14\lib\impath.ps" />
+    <None Include="Tools\gs9.14\lib\Info-macos.plist" />
+    <None Include="Tools\gs9.14\lib\jispaper.ps" />
+    <None Include="Tools\gs9.14\lib\jobseparator.ps" />
+    <None Include="Tools\gs9.14\lib\landscap.ps" />
+    <None Include="Tools\gs9.14\lib\level1.ps" />
+    <None Include="Tools\gs9.14\lib\lines.ps" />
+    <None Include="Tools\gs9.14\lib\lp386.bat" />
+    <None Include="Tools\gs9.14\lib\lp386r2.bat" />
+    <None Include="Tools\gs9.14\lib\lpgs.bat" />
+    <None Include="Tools\gs9.14\lib\lpr2.bat" />
+    <None Include="Tools\gs9.14\lib\lprsetup.sh" />
+    <None Include="Tools\gs9.14\lib\markhint.ps" />
+    <None Include="Tools\gs9.14\lib\markpath.ps" />
+    <None Include="Tools\gs9.14\lib\mkcidfm.ps" />
+    <None Include="Tools\gs9.14\lib\necp2x.upp" />
+    <None Include="Tools\gs9.14\lib\necp2x6.upp" />
+    <None Include="Tools\gs9.14\lib\opdfread.ps" />
+    <None Include="Tools\gs9.14\lib\packfile.ps" />
+    <None Include="Tools\gs9.14\lib\pcharstr.ps" />
+    <None Include="Tools\gs9.14\lib\pdf2dsc" />
+    <None Include="Tools\gs9.14\lib\pdf2dsc.bat" />
+    <None Include="Tools\gs9.14\lib\pdf2dsc.ps" />
+    <None Include="Tools\gs9.14\lib\pdf2ps" />
+    <None Include="Tools\gs9.14\lib\pdf2ps.bat" />
+    <None Include="Tools\gs9.14\lib\pdf2ps.cmd" />
+    <None Include="Tools\gs9.14\lib\PDFA_def.ps" />
+    <None Include="Tools\gs9.14\lib\pdfwrite.ps" />
+    <None Include="Tools\gs9.14\lib\PDFX_def.ps" />
+    <None Include="Tools\gs9.14\lib\pf2afm" />
+    <None Include="Tools\gs9.14\lib\pf2afm.bat" />
+    <None Include="Tools\gs9.14\lib\pf2afm.cmd" />
+    <None Include="Tools\gs9.14\lib\pf2afm.ps" />
+    <None Include="Tools\gs9.14\lib\pfbtopfa" />
+    <None Include="Tools\gs9.14\lib\pfbtopfa.bat" />
+    <None Include="Tools\gs9.14\lib\pfbtopfa.ps" />
+    <None Include="Tools\gs9.14\lib\pftogsf.bat" />
+    <None Include="Tools\gs9.14\lib\ppath.ps" />
+    <None Include="Tools\gs9.14\lib\pphs" />
+    <None Include="Tools\gs9.14\lib\pphs.ps" />
+    <None Include="Tools\gs9.14\lib\prfont.ps" />
+    <None Include="Tools\gs9.14\lib\printafm" />
+    <None Include="Tools\gs9.14\lib\printafm.ps" />
+    <None Include="Tools\gs9.14\lib\ps2ai.ps" />
+    <None Include="Tools\gs9.14\lib\ps2ascii" />
+    <None Include="Tools\gs9.14\lib\ps2ascii.bat" />
+    <None Include="Tools\gs9.14\lib\ps2ascii.cmd" />
+    <None Include="Tools\gs9.14\lib\ps2ascii.ps" />
+    <None Include="Tools\gs9.14\lib\ps2epsi" />
+    <None Include="Tools\gs9.14\lib\ps2epsi.bat" />
+    <None Include="Tools\gs9.14\lib\ps2epsi.cmd" />
+    <None Include="Tools\gs9.14\lib\ps2epsi.ps" />
+    <None Include="Tools\gs9.14\lib\ps2pdf" />
+    <None Include="Tools\gs9.14\lib\ps2pdf.bat" />
+    <None Include="Tools\gs9.14\lib\ps2pdf.cmd" />
+    <None Include="Tools\gs9.14\lib\ps2pdf12" />
+    <None Include="Tools\gs9.14\lib\ps2pdf12.bat" />
+    <None Include="Tools\gs9.14\lib\ps2pdf12.cmd" />
+    <None Include="Tools\gs9.14\lib\ps2pdf13" />
+    <None Include="Tools\gs9.14\lib\ps2pdf13.bat" />
+    <None Include="Tools\gs9.14\lib\ps2pdf13.cmd" />
+    <None Include="Tools\gs9.14\lib\ps2pdf14" />
+    <None Include="Tools\gs9.14\lib\ps2pdf14.bat" />
+    <None Include="Tools\gs9.14\lib\ps2pdf14.cmd" />
+    <None Include="Tools\gs9.14\lib\ps2pdfwr" />
+    <None Include="Tools\gs9.14\lib\ps2pdfxx.bat" />
+    <None Include="Tools\gs9.14\lib\ps2ps" />
+    <None Include="Tools\gs9.14\lib\ps2ps.bat" />
+    <None Include="Tools\gs9.14\lib\ps2ps.cmd" />
+    <None Include="Tools\gs9.14\lib\ps2ps2" />
+    <None Include="Tools\gs9.14\lib\ps2ps2.bat" />
+    <None Include="Tools\gs9.14\lib\ps2ps2.cmd" />
+    <None Include="Tools\gs9.14\lib\quit.ps" />
+    <None Include="Tools\gs9.14\lib\ras1.upp" />
+    <None Include="Tools\gs9.14\lib\ras24.upp" />
+    <None Include="Tools\gs9.14\lib\ras3.upp" />
+    <None Include="Tools\gs9.14\lib\ras32.upp" />
+    <None Include="Tools\gs9.14\lib\ras4.upp" />
+    <None Include="Tools\gs9.14\lib\ras8m.upp" />
+    <None Include="Tools\gs9.14\lib\rinkj-2200-setup" />
+    <None Include="Tools\gs9.14\lib\rollconv.ps" />
+    <None Include="Tools\gs9.14\lib\showchar.ps" />
+    <None Include="Tools\gs9.14\lib\showpage.ps" />
+    <None Include="Tools\gs9.14\lib\st640ih.upp" />
+    <None Include="Tools\gs9.14\lib\st640ihg.upp" />
+    <None Include="Tools\gs9.14\lib\st640p.upp" />
+    <None Include="Tools\gs9.14\lib\st640pg.upp" />
+    <None Include="Tools\gs9.14\lib\st640pl.upp" />
+    <None Include="Tools\gs9.14\lib\st640plg.upp" />
+    <None Include="Tools\gs9.14\lib\stc.upp" />
+    <None Include="Tools\gs9.14\lib\stc1520h.upp" />
+    <None Include="Tools\gs9.14\lib\stc2.upp" />
+    <None Include="Tools\gs9.14\lib\stc200_h.upp" />
+    <None Include="Tools\gs9.14\lib\stc2s_h.upp" />
+    <None Include="Tools\gs9.14\lib\stc2_h.upp" />
+    <None Include="Tools\gs9.14\lib\stc300.upp" />
+    <None Include="Tools\gs9.14\lib\stc300bl.upp" />
+    <None Include="Tools\gs9.14\lib\stc300bm.upp" />
+    <None Include="Tools\gs9.14\lib\stc500p.upp" />
+    <None Include="Tools\gs9.14\lib\stc500ph.upp" />
+    <None Include="Tools\gs9.14\lib\stc600ih.upp" />
+    <None Include="Tools\gs9.14\lib\stc600p.upp" />
+    <None Include="Tools\gs9.14\lib\stc600pl.upp" />
+    <None Include="Tools\gs9.14\lib\stc640p.upp" />
+    <None Include="Tools\gs9.14\lib\stc800ih.upp" />
+    <None Include="Tools\gs9.14\lib\stc800p.upp" />
+    <None Include="Tools\gs9.14\lib\stc800pl.upp" />
+    <None Include="Tools\gs9.14\lib\stcany.upp" />
+    <None Include="Tools\gs9.14\lib\stcany_h.upp" />
+    <None Include="Tools\gs9.14\lib\stcinfo.ps" />
+    <None Include="Tools\gs9.14\lib\stcolor.ps" />
+    <None Include="Tools\gs9.14\lib\stc_h.upp" />
+    <None Include="Tools\gs9.14\lib\stc_l.upp" />
+    <None Include="Tools\gs9.14\lib\stocht.ps" />
+    <None Include="Tools\gs9.14\lib\traceimg.ps" />
+    <None Include="Tools\gs9.14\lib\traceop.ps" />
+    <None Include="Tools\gs9.14\lib\type1enc.ps" />
+    <None Include="Tools\gs9.14\lib\type1ops.ps" />
+    <None Include="Tools\gs9.14\lib\uninfo.ps" />
+    <None Include="Tools\gs9.14\lib\unix-lpr.sh" />
+    <None Include="Tools\gs9.14\lib\unprot.ps" />
+    <None Include="Tools\gs9.14\lib\viewcmyk.ps" />
+    <None Include="Tools\gs9.14\lib\viewgif.ps" />
+    <None Include="Tools\gs9.14\lib\viewjpeg.ps" />
+    <None Include="Tools\gs9.14\lib\viewmiff.ps" />
+    <None Include="Tools\gs9.14\lib\viewpbm.ps" />
+    <None Include="Tools\gs9.14\lib\viewpcx.ps" />
+    <None Include="Tools\gs9.14\lib\viewps2a.ps" />
+    <None Include="Tools\gs9.14\lib\viewrgb.ps" />
+    <None Include="Tools\gs9.14\lib\wftopfa" />
+    <None Include="Tools\gs9.14\lib\wftopfa.ps" />
+    <None Include="Tools\gs9.14\lib\winmaps.ps" />
+    <None Include="Tools\gs9.14\lib\wmakebat.bat" />
+    <None Include="Tools\gs9.14\lib\wrfont.ps" />
+    <None Include="Tools\gs9.14\lib\zeroline.ps" />
+    <None Include="Tools\gs9.14\trio\doc\trio.cfg" />
+    <None Include="Tools\redmon19\FILE_ID.DIZ" />
+    <None Include="Tools\redmon19\LICENCE" />
+    <None Include="Tools\redmon19\redmon.chm" />
+    <None Include="Tools\redmon19\redmon.chw" />
+    <None Include="Tools\redmon19\src.zip" />
+    <None Include="Tools\redmon19\src\src\FILE_ID.DIZ" />
+    <None Include="Tools\redmon19\src\src\LICENCE" />
+    <None Include="Tools\redmon19\src\src\setup_x64.manifest" />
+    <None Include="Tools\redmon19\src\src\setup_x86.manifest" />
+    <None Include="Tools\redmon19\src\src\unredmon_x64.manifest" />
+    <None Include="Tools\redmon19\src\src\unredmon_x86.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tools\gs9.14\bin\gsdll32.dll" />
+    <Content Include="Tools\gs9.14\bin\gswin32.exe" />
+    <Content Include="Tools\gs9.14\bin\gswin32c.exe" />
+    <Content Include="Tools\gs9.14\doc\API.htm" />
+    <Content Include="Tools\gs9.14\doc\C-style.htm" />
+    <Content Include="Tools\gs9.14\doc\Changes.htm" />
+    <Content Include="Tools\gs9.14\doc\Commprod.htm" />
+    <Content Include="Tools\gs9.14\doc\Deprecated.htm" />
+    <Content Include="Tools\gs9.14\doc\Details.htm" />
+    <Content Include="Tools\gs9.14\doc\Details8.htm" />
+    <Content Include="Tools\gs9.14\doc\Details9.htm" />
+    <Content Include="Tools\gs9.14\doc\Develop.htm" />
+    <Content Include="Tools\gs9.14\doc\Devices.htm" />
+    <Content Include="Tools\gs9.14\doc\DLL.htm" />
+    <Content Include="Tools\gs9.14\doc\Drivers.htm" />
+    <Content Include="Tools\gs9.14\doc\Fonts.htm" />
+    <Content Include="Tools\gs9.14\doc\gs.css" />
+    <Content Include="Tools\gs9.14\doc\Helpers.htm" />
+    <Content Include="Tools\gs9.14\doc\Hershey.htm" />
+    <Content Include="Tools\gs9.14\doc\History1.htm" />
+    <Content Include="Tools\gs9.14\doc\History2.htm" />
+    <Content Include="Tools\gs9.14\doc\History3.htm" />
+    <Content Include="Tools\gs9.14\doc\History4.htm" />
+    <Content Include="Tools\gs9.14\doc\History5.htm" />
+    <Content Include="Tools\gs9.14\doc\History6.htm" />
+    <Content Include="Tools\gs9.14\doc\History7.htm" />
+    <Content Include="Tools\gs9.14\doc\History8.htm" />
+    <Content Include="Tools\gs9.14\doc\History9.htm" />
+    <Content Include="Tools\gs9.14\doc\index.html" />
+    <Content Include="Tools\gs9.14\doc\Install.htm" />
+    <Content Include="Tools\gs9.14\doc\Issues.htm" />
+    <Content Include="Tools\gs9.14\doc\Language.htm" />
+    <Content Include="Tools\gs9.14\doc\Lib.htm" />
+    <Content Include="Tools\gs9.14\doc\Make.htm" />
+    <Content Include="Tools\gs9.14\doc\News.htm" />
+    <Content Include="Tools\gs9.14\doc\Projects.htm" />
+    <Content Include="Tools\gs9.14\doc\Ps-style.htm" />
+    <Content Include="Tools\gs9.14\doc\Ps2epsi.htm" />
+    <Content Include="Tools\gs9.14\doc\Ps2pdf.htm" />
+    <Content Include="Tools\gs9.14\doc\Ps2ps2.htm" />
+    <Content Include="Tools\gs9.14\doc\pscet_status.txt" />
+    <Content Include="Tools\gs9.14\doc\Psfiles.htm" />
+    <Content Include="Tools\gs9.14\doc\Readme.htm" />
+    <Content Include="Tools\gs9.14\doc\Release.htm" />
+    <Content Include="Tools\gs9.14\doc\SavedPages.htm" />
+    <Content Include="Tools\gs9.14\doc\Source.htm" />
+    <Content Include="Tools\gs9.14\doc\thirdparty.htm" />
+    <Content Include="Tools\gs9.14\doc\Unix-lpr.htm" />
+    <Content Include="Tools\gs9.14\doc\Use.htm" />
+    <Content Include="Tools\gs9.14\doc\WhatIsGS.htm" />
+    <Content Include="Tools\gs9.14\doc\Xfonts.htm" />
+    <Content Include="Tools\gs9.14\libpng\contrib\examples\iccfrompng.c" />
+    <Content Include="Tools\gs9.14\libpng\contrib\examples\pngpixel.c" />
+    <Content Include="Tools\gs9.14\libpng\contrib\examples\pngtopng.c" />
+    <Content Include="Tools\gs9.14\libpng\contrib\examples\README.txt" />
+    <Content Include="Tools\gs9.14\lib\Fontmap.Sol" />
+    <Content Include="Tools\gs9.14\lib\ghostpdf.inf" />
+    <Content Include="Tools\gs9.14\trio\doc\doc.h" />
+    <Content Include="Tools\gs9.14\trio\doc\doc_dynamic.h" />
+    <Content Include="Tools\gs9.14\trio\doc\doc_printf.h" />
+    <Content Include="Tools\gs9.14\trio\doc\doc_register.h" />
+    <Content Include="Tools\gs9.14\trio\doc\doc_scanf.h" />
+    <Content Include="Tools\gs9.14\trio\doc\doc_static.h" />
+    <Content Include="Tools\gs9.14\trio\doc\footer.html" />
+    <Content Include="Tools\gs9.14\trio\doc\header.html" />
+    <Content Include="Tools\gs9.14\trio\doc\trio.css" />
+    <Content Include="Tools\gs9.14\uninstgs.exe" />
+    <Content Include="Tools\gs9.14\zlib\doc\algorithm.txt" />
+    <Content Include="Tools\gs9.14\zlib\doc\rfc1950.txt" />
+    <Content Include="Tools\gs9.14\zlib\doc\rfc1951.txt" />
+    <Content Include="Tools\gs9.14\zlib\doc\rfc1952.txt" />
+    <Content Include="Tools\gs9.14\zlib\doc\txtvsbin.txt" />
+    <Content Include="Tools\redmon19\enum.exe" />
+    <Content Include="Tools\redmon19\README.TXT" />
+    <Content Include="Tools\redmon19\redfile.exe" />
+    <Content Include="Tools\redmon19\redmon32.dll" />
+    <Content Include="Tools\redmon19\redmon64.dll" />
+    <Content Include="Tools\redmon19\redpr.exe" />
+    <Content Include="Tools\redmon19\redrun.exe" />
+    <Content Include="Tools\redmon19\setup.exe" />
+    <Content Include="Tools\redmon19\setup64.exe" />
+    <Content Include="Tools\redmon19\src\src\binary\base.ico" />
+    <Content Include="Tools\redmon19\src\src\binary\redmon.gif" />
+    <Content Include="Tools\redmon19\src\src\binary\setup.ico" />
+    <Content Include="Tools\redmon19\src\src\binary\unredmon.ico" />
+    <Content Include="Tools\redmon19\src\src\changes.txt" />
+    <Content Include="Tools\redmon19\src\src\dist.txt" />
+    <Content Include="Tools\redmon19\src\src\doc2hhp.c" />
+    <Content Include="Tools\redmon19\src\src\doc2html.c" />
+    <Content Include="Tools\redmon19\src\src\enum.c" />
+    <Content Include="Tools\redmon19\src\src\en\redmon.rc" />
+    <Content Include="Tools\redmon19\src\src\en\redmon.txt" />
+    <Content Include="Tools\redmon19\src\src\en\setup.rc" />
+    <Content Include="Tools\redmon19\src\src\en\unredmon.rc" />
+    <Content Include="Tools\redmon19\src\src\language.txt" />
+    <Content Include="Tools\redmon19\src\src\portmon.c" />
+    <Content Include="Tools\redmon19\src\src\portmon.h" />
+    <Content Include="Tools\redmon19\src\src\portrc.h" />
+    <Content Include="Tools\redmon19\src\src\README.TXT" />
+    <Content Include="Tools\redmon19\src\src\redfile.c" />
+    <Content Include="Tools\redmon19\src\src\redmon.c" />
+    <Content Include="Tools\redmon19\src\src\redmon.h" />
+    <Content Include="Tools\redmon19\src\src\redmon.mak" />
+    <Content Include="Tools\redmon19\src\src\redmon32.def" />
+    <Content Include="Tools\redmon19\src\src\redmon35.def" />
+    <Content Include="Tools\redmon19\src\src\redmon95.def" />
+    <Content Include="Tools\redmon19\src\src\redmonnt.def" />
+    <Content Include="Tools\redmon19\src\src\redmonrc.h" />
+    <Content Include="Tools\redmon19\src\src\redpr.c" />
+    <Content Include="Tools\redmon19\src\src\redrun.c" />
+    <Content Include="Tools\redmon19\src\src\setup.c" />
+    <Content Include="Tools\redmon19\src\src\setup.def" />
+    <Content Include="Tools\redmon19\src\src\setup.h" />
+    <Content Include="Tools\redmon19\src\src\src.txt" />
+    <Content Include="Tools\redmon19\src\src\unredmon.c" />
+    <Content Include="Tools\redmon19\src\src\unredmon.def" />
+    <Content Include="Tools\redmon19\src\src\unredmon.h" />
+    <Content Include="Tools\redmon19\unredmon.exe" />
+    <Content Include="Tools\redmon19\unredmon64.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
